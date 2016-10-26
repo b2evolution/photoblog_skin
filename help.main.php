@@ -1,9 +1,15 @@
 <?php
 /**
- * This file is the template that displays an access denied for non-members
+ * This is the template that displays the help screen for a collection
  *
- * For a quick explanation of b2evo 2.0 skins, please start here:
- * {@link http://b2evolution.net/man/skin-development-primer}
+ * This file is not meant to be called directly.
+ * It is meant to be called by an include in the main.page.php template.
+ * To display the archive directory, you should call a stub AND pass the right parameters
+ * For example: /blogs/index.php?disp=help
+ *
+ * b2evolution - {@link http://b2evolution.net/}
+ * Released under GNU GPL License - {@link http://b2evolution.net/about/gnu-gpl-license}
+ * @copyright (c)2003-2016 by Francois Planque - {@link http://fplanque.com/}
  *
  * @package evoskins
  * @subpackage photoblog
@@ -81,7 +87,7 @@ siteskin_include( '_site_body_header.inc.php' );
 
 	<?php
 		// -------------- MAIN CONTENT TEMPLATE INCLUDED HERE (Based on $disp) --------------
-		skin_include( '_access_denied.disp.php' );
+		skin_include( '$disp$' );
 		// Note: you can customize any of the sub templates included here by
 		// copying the matching php file into your skin directory.
 		// ------------------------- END OF MAIN CONTENT TEMPLATE ---------------------------
